@@ -1,3 +1,19 @@
+@font-face {
+    font-family: "highlight";
+    src:url('../fonts/Poiret_One/PoiretOne-Regular.ttf')
+}
+
+@font-face{
+    font-family: "all";
+    src:url('../fonts/Mada/Mada-Regular.ttf')
+}
+*{
+	font-family: "highlight";
+	letter-spacing: 1px;
+}
+nav,a{
+	letter-spacing: 2px;
+}
 h1,p{
     margin: 0;
 }
@@ -27,4 +43,3 @@ a:hover{
 	color: white;
 }
 
-#343440
