@@ -18,6 +18,9 @@
     <!-- JS & JQuery -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 </head>
 
 <Body>
@@ -56,7 +59,7 @@
                     <h4 class="card-title">Modern room</h4>
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.</p>
-                    <a href="#mymodal" class="btn btn-dark float-right my-2 mr-1" data-toggle="modal">More</a>
+                    <a href="#mymodal" class="btn btn-dark float-right my-2 mr-1" data-toggle="modal">Book</a>
                 </div>
             </div>
             <div class="card">
@@ -66,7 +69,7 @@
 
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.</p>
-                    <a href="#mymodal" class="btn btn-dark float-right my-2 mr-1" data-toggle="modal">More</a>
+                    <a href="#mymodal" class="btn btn-dark float-right my-2 mr-1" data-toggle="modal">Book</a>
                 </div>
             </div>
             <div class="card">
@@ -76,7 +79,7 @@
 
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.</p>
-                    <a href="#mymodal" class="btn btn-dark float-right my-2 mr-1" data-toggle="modal">More</a>
+                    <a href="#mymodal" class="btn btn-dark float-right my-2 mr-1" data-toggle="modal">Book</a>
                 </div>
             </div>
             <div class="card">
@@ -86,7 +89,7 @@
 
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.</p>
-                    <a href="#mymodal" class="btn btn-dark float-right my-2 mr-1" data-toggle="modal">More</a>
+                    <a href="#mymodal" class="btn btn-dark float-right my-2 mr-1" data-toggle="modal">Book</a>
                 </div>
             </div>
             <div class="card">
@@ -95,7 +98,7 @@
                     <h4 class="card-title">Cozy authentic nature environment</h4>
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.</p>
-                    <a href="#mymodal" class="btn btn-dark float-right my-2 mr-1" data-toggle="modal">More</a>
+                    <a href="#mymodal" class="btn btn-dark float-right my-2 mr-1" data-toggle="modal">Book</a>
                 </div>
             </div>
             <div class="card">
@@ -104,7 +107,7 @@
                     <h4 class="card-title">Huge open veranda</h4>
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.</p>
-                    <a href="#mymodal" class="btn btn-dark float-right my-2 mr-1" data-toggle="modal">More</a>
+                    <a href="#mymodal" class="btn btn-dark float-right my-2 mr-1" data-toggle="modal">Book</a>
                 </div>
             </div>
             <div class="card">
@@ -114,7 +117,7 @@
 
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.</p>
-                    <a href="#mymodal" class="btn btn-dark float-right my-2 mr-1" data-toggle="modal">More</a>
+                    <a href="#mymodal" class="btn btn-dark float-right my-2 mr-1" data-toggle="modal">Book</a>
                 </div>
             </div>
             <div class="card">
@@ -124,7 +127,7 @@
 
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.</p>
-                    <a href="#mymodal" class="btn btn-dark float-right my-2 mr-1" data-toggle="modal">More</a>
+                    <a href="#mymodal" class="btn btn-dark float-right my-2 mr-1" data-toggle="modal">Book</a>
                 </div>
             </div>
 
@@ -207,3 +210,39 @@
 </div>
 
 </html>
+
+<div class="modal fade" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="my-modal-title" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="my-modal-title">Book this room</h5>
+                <button class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="" method="" enctype="">
+                    <div class="form-group">
+                        <label for="daterange">Pick check-in and check-out dates</label>
+                        <input type="text" class="form-control" name="daterange" value="01/01/2018 - 01/15/2018" />
+
+                        <script>
+                            $(function () {
+                                $('input[name="daterange"]').daterangepicker({
+                                    opens: 'left'
+                                }, function (start, end, label) {
+                                    console.log("A new date selection was made: " + start.format(
+                                        'YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+                                });
+                            });
+                        </script>
+
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                
+            </div>
+        </div>
+    </div>
+</div>
