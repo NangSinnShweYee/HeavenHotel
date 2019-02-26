@@ -8,7 +8,7 @@
     src:url('../fonts/Mada/Mada-Regular.ttf')
 }
 *{
-	font-family: "highlight";
+	font-family: "all";
 	letter-spacing: 1px;
 }
 nav,a{
