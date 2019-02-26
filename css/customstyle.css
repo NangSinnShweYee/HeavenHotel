@@ -27,4 +27,6 @@ a:hover{
 	color: white;
 }
 
-#343440
+.poolimg img{
+	height: 600px;
+}
